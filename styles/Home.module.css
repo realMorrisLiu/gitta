@@ -1,0 +1,17 @@
+.container {
+}
+
+.main {
+
+}
+
+.footer {
+
+}
+
+/* media query for mobile */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
