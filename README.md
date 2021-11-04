@@ -1,5 +1,7 @@
 # Gitta!
 
+Gitta (Pronounced /ɡɪˈtɑː/, like "guitar", but I play clarinet instead of guitar. 🤣) is a fully extensible git server. WIP on core functions now.
+
 ## Task
 
 - [ ] Pages

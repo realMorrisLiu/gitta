@@ -14,7 +14,7 @@ const Avatar = ({ name, username, avatar, size }: Props) => {
     <div className="flex cursor-pointer">
       <Link href={`/${username}`} passHref>
         <Image
-          className="rounded"
+          className="rounded-full"
           src={avatar}
           alt={`${name}'s avatar'`}
           width={size ?? 24}
