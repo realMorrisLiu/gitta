@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
-import Header from '@/components/Header';
+import Layout from '@/components/Layout';
 
-const Account = ({ account }: { account: string }) => {
-  const router = useRouter();
-  return (
-    <div>
-      <Header />
-      {router.query.account}
-    </div>
-  );
+interface AccountProps {
+  account: string;
+}
+const Account = ({ account }: AccountProps) => {
+  return <div>{account}</div>;
+};
+
+Account.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {
+      ...context.params,
+    },
+  };
 };
 
 export default Account;

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Layout from '@/components/Layout';
 
 const Activity = () => {
   return (
     <div>
-      <Header />
       <main className="min-h-screen relative flex">
         <aside className="w-96 ml-4 pl-4 pr-8 py-8 h-screen border-r sticky top-0 overflow-y-auto">
           <div>
@@ -27,6 +26,10 @@ const Activity = () => {
       </main>
     </div>
   );
+};
+
+Activity.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Activity;

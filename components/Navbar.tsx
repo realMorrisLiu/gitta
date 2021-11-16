@@ -11,7 +11,7 @@ const navs = [
   { href: '/extensions', name: 'Extensions' },
 ];
 
-const Header = () => {
+const Navbar = () => {
   const router = useRouter();
 
   return (
@@ -53,4 +53,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

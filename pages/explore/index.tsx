@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-import Header from '@/components/Header';
+import Layout from '@/components/Layout';
 
 const Explore = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div></div>;
+};
+
+Explore.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Explore;

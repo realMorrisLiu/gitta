@@ -1,15 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Logo = () => {
   return (
-    <div className="flex items-center w-24 cursor-pointer">
-      <div className="flex hover:animate-wiggle">
-        <Image src="/gitta.png" width={32} height={32} alt="gitta logo" />
+    <Link href="/" passHref>
+      <div className="group flex items-center w-24 cursor-pointer select-none">
+        <div className="flex group-hover:animate-wiggle">
+          <Image src="/gitta.png" width={32} height={32} alt="gitta logo" />
+        </div>
+        <i className="ml-2">Gitta!</i>
       </div>
-
-      <i className="ml-2">Gitta!</i>
-    </div>
+    </Link>
   );
 };
 

@@ -1,8 +1,8 @@
-import Header from '@/components/Header';
-import type { NextPage } from 'next';
+import React, { ReactElement } from 'react';
 import Head from 'next/head';
+import Layout from '@/components/Layout';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div className="bg-white dark:bg-gray-800 text-black dark:text-white">
       <Head>
@@ -32,13 +32,15 @@ const Home: NextPage = () => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
-      <Header />
-
       <main className="inset-4">Gitta!</main>
 
       <footer className="inset-8">from gitta</footer>
     </div>
   );
+};
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Home;
